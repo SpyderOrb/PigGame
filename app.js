@@ -27,7 +27,7 @@ GAME RULES:
 //   Using querySelector to change the CSS of some element
 
 //                          1) Define variables
-let scores, roundScore, activePlayer, gamePlaying, winScore, lastDice0, lastDice1;
+let scores, roundScore, activePlayer, gamePlaying, winScore, lastDice0, lastDice1, testGit;
 init();
 
 //                          2) Make the dice pic invisible and set all values to 0
