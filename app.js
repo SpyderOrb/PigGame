@@ -73,9 +73,9 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
 });
 //                          If you roll 6 dices
 function sixDices() {
-    roundScore = 0;
-    scores[activePlayer] = roundScore;
-    document.querySelector("#score-" + activePlayer).innerHTML = scores[activePlayer];
+    // roundScore = 0;
+    // scores[activePlayer] = roundScore;
+    document.querySelector("#score-" + activePlayer).innerHTML = 0; //scores[activePlayer];
     nextPlayer();
 }
 
