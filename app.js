@@ -30,15 +30,7 @@ GAME RULES:
 let scores, roundScore, activePlayer, gamePlaying, winScore, lastDice0, lastDice1, testGit;
 init();
 
-//                          2) Make the dice pic invisible and set all values to 0
-// document.querySelector(".dice").style.display = "none";
-
-// document.getElementById("score-0").innerHTML = 0;
-// document.getElementById("score-1").innerHTML = 0;
-// document.getElementById("current-0").innerHTML = 0;
-// document.getElementById("current-1").innerHTML = 0;
-
-//                          3) Making it possible to roll the dice
+//                          2) Making it possible to roll the dice
 document.querySelector(".btn-roll").addEventListener("click", function () {
     if (gamePlaying) {
         // 1. random number
@@ -62,7 +54,7 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
             // 3. update the round score IF the number was NOT a 1.
             // add score
             roundScore += dice0 + dice1;
-            document.querySelector("#current-" + activePlayer).textContent = roundScore;
+            document.querySelector("#current-" + activePlayer).innerHTML = roundScore;
         } else {
             nextPlayer();
         }
@@ -71,11 +63,9 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
         lastDice1 = dice1;
     }
 });
-//                          If you roll 6 dices
+//                          3) If you roll 6 dices
 function sixDices() {
-    // roundScore = 0;
-    // scores[activePlayer] = roundScore;
-    document.querySelector("#score-" + activePlayer).innerHTML = 0; //scores[activePlayer];
+    document.querySelector("#score-" + activePlayer).innerHTML = 0;
     nextPlayer();
 }
 
@@ -87,8 +77,8 @@ function nextPlayer() {
     activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
     roundScore = 0;
 
-    document.getElementById("current-0").textContent = "0";
-    document.getElementById("current-1").textContent = "0";
+    document.getElementById("current-0").innerHTML = 0;
+    document.getElementById("current-1").innerHTML = 0;
     document.querySelector(".player-0-panel").classList.toggle("active");
     document.querySelector(".player-1-panel").classList.toggle("active");
 
